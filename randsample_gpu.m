@@ -10,6 +10,5 @@ function y = randsample_gpu(n, k, w)
 	edges = min(cumsum(p),1); % protect against accumulated round-off
 	edges(end) = 1; % get the upper edge exact
     edges = repmat(edges,k,1);
-    % randnum = repmat(rand(k,1,'gpuArray'),1,n);
-    randnum = repmat(rand(k,1),1,n);    
+    randnum = repmat(rand(k,1,'gpuArray'),1,n);
     [~,y] = max(randnum<edges,[],2);

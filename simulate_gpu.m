@@ -1,10 +1,5 @@
 function X = simulate_gpu(mc,numSteps,numSims,w)
 
-% 1st input: dtmc object
-% 2nd input: number of periods
-% 3rd input: number of buyers
-% 4th input: probability (transition?) matrix
-
     % SIMULATE Simulate Markov chain state walks
     % mc is markov chain
     % w is initial state distribution
